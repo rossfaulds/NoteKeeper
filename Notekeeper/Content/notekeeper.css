@@ -1,0 +1,141 @@
+﻿.editrelative {
+    position: relative;
+}
+
+.posabsolute {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.posrelative {
+    position: relative;
+}
+
+.editpos {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.trashpos {
+    position: absolute;
+    right: 25px;
+    top: 0;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.pastel-purple {
+    background-color: #C4ABFE;
+}
+
+.pastel-purple-header {
+    background-color: #A27AFE;
+}
+
+.pastel-blue {
+    background-color: #57BCD9;
+}
+
+.pastel-blue-header {
+    background-color: #2897B7;
+}
+
+.pastel-green {
+    background-color: #8BFEA8;
+}
+
+.pastel-green-header {
+    background-color: #0AFE47;
+}
+
+.pastel-yellow {
+    background-color: #EEF093;
+}
+
+.pastel-yellow-header {
+    background-color: #CDD11B;
+}
+
+.pastel-orange {
+    background-color: #FFC895;
+}
+
+.pastel-orange-header {
+    background-color: #FF9C42;
+}
+
+.pastel-red {
+    background-color: #D7ACAC;
+}
+
+.pastel-red-header {
+    background-color: #C48484;
+}
+
+.pastel-blue2 {
+    background-color: #A5D3CA;
+}
+
+.pastel-blue2-header {
+    background-color: #5EAE9E;
+}
+
+.bordercircle {
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    /*z-index: -1;*/
+    /* width and height can be anything, as long as they're equal */
+}
+
+.colorselected {
+    background-color: #000000;
+}
+
+.colorunselected {
+        background-color: transparent;
+    }
+
+.circle {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.grid-item {
+    width: 300px;
+}
+
+.grid-item--width2 {
+    width: 400px;
+}
+
+.hiddenAddNote {
+    display: none;
+}
+
+.hiddenUpdateNote {
+    display: none;
+}
+
+
+.visibleAddNote {
+    display: block;
+}
+
+.modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+    width: 100%;
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+
+.modal-body .form-horizontal .col-sm-offset-2 {
+    margin-left: 15px;
+}

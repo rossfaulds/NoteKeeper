@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notekeeper", "Notekeeper\Notekeeper.csproj", "{EBD4D093-B293-4FAC-93E6-98E2A4119C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notekeeper.Tests", "Notekeeper.Tests\Notekeeper.Tests.csproj", "{77538D53-205A-4448-B593-2AB582B0F5E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBD4D093-B293-4FAC-93E6-98E2A4119C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD4D093-B293-4FAC-93E6-98E2A4119C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD4D093-B293-4FAC-93E6-98E2A4119C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD4D093-B293-4FAC-93E6-98E2A4119C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77538D53-205A-4448-B593-2AB582B0F5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77538D53-205A-4448-B593-2AB582B0F5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77538D53-205A-4448-B593-2AB582B0F5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77538D53-205A-4448-B593-2AB582B0F5E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
