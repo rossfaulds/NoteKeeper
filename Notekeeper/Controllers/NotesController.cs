@@ -17,6 +17,8 @@ namespace Notekeeper.Controllers
         private NotesDbContext db = new NotesDbContext();
 
         // GET: api/Notes
+        [Route("api/Notes")]
+        [HttpGet]
         public List<Note> GetNotes()
         {
             return db.Notes.ToList();
@@ -24,6 +26,9 @@ namespace Notekeeper.Controllers
 
         // GET: api/Notes/5
         [ResponseType(typeof(Note))]
+        [Route("api/Note/{id}")]
+        [HttpGet]
+
         public IHttpActionResult GetNote(int id)
         {
             Note note = db.Notes.Find(id);
@@ -37,7 +42,7 @@ namespace Notekeeper.Controllers
 
         // PUT: api/Notes/5
         [ResponseType(typeof(void))]
-        [Route("api/UpdateNote/{id}")]
+        [Route("api/Note/{id}")]
         [HttpPut]
         public IHttpActionResult UpdateNote(int id, Note note)
         {
@@ -76,7 +81,7 @@ namespace Notekeeper.Controllers
         // POST: api/Notes
         [ResponseType(typeof(Note))]
         [HttpPost]
-        [Route("api/PostNote")]
+        [Route("api/Note")]
         public IHttpActionResult PostNote(Note note)
         {
            /* if (!ModelState.IsValid)
@@ -90,10 +95,10 @@ namespace Notekeeper.Controllers
             return Ok(note.Id);
         }
 
-        // DELETE: api/Notes/5
+        // DELETE: api/Note/5
         [ResponseType(typeof(Note))]
         [HttpDelete]
-        [Route("api/DeleteNote/{id}")]
+        [Route("api/Note/{id}")]
         public IHttpActionResult DeleteNote(int id)
         {
             Note note = db.Notes.Find(id);

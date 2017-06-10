@@ -1,2 +1,8 @@
 .vs/
 packages/
+Notekeeper.Tests/bin/
+Notekeeper.Tests/obj/
+Notekeeper/App_Data/
+Notekeeper/bin/
+Notekeeper/obj/
+

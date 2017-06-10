@@ -25,12 +25,12 @@
             }
         });
 
-
+        // event delegation for dynamically generated DOM elements
         $("#startgrid").on("click", ".glyphicon-trash", function(ev) {
             ev.stopPropagation();
             var noteid = $(this).closest(".panel").data("noteid");
             $.ajax({
-                url: "/api/DeleteNote/" + noteid,
+                url: "/api/Note/" + noteid,
                 type: "DELETE",
                 success: function (data) {
                     deleteItem(noteid);
@@ -78,7 +78,7 @@
             var colorClass = $("#AddNoteVisibility #ColorClass").val();
             var categories = $("#AddNoteVisibility #Categories").val();
 
-            $.post("/api/PostNote",
+            $.post("/api/Note",
                 { Title: noteTitle, Content: editorValue, Categories:categories,ColorClass : colorClass},
                 function (data, status) {
                     var html = formatHtml(data,noteTitle, editorValue, categories, colorClass);
@@ -94,11 +94,7 @@
 
         var formatHtml = function (id, title, notecontent, categories, colorclass) {
 
-            var idtext = "";
-            if (id) {
-                idtext = 'data-noteid="' + id + '"';
-            }
-            var html = "<div " + idtext + ' data-categories="' + categories + '"  data-colorclass="' + colorclass.trim() + '" class="panel grid-item ' + categories + " " + colorclass + '">' +
+            var html = "<div " + 'data-noteid="' + id + '"'+' data-categories="' + categories + '"  data-colorclass="' + colorclass.trim() + '" class="panel grid-item ' + categories + " " + colorclass + '">' +
             '<div class="panel-heading item-width ' +
                 colorclass.trim() +
                 '-header">' +
@@ -114,7 +110,8 @@
             return html;
         }
 
-        var updateItem = function(id, title, editor, categories, colorClass) {
+        var updateItem = function (id, title, editor, categories, colorClass) {
+
             var html = formatHtml(id, title, editor, categories, colorClass);
             $('[data-noteid="' + id + '"]').remove();
             wall.prepend(html);
@@ -143,7 +140,6 @@
             $("#UpdateNoteVisibility .bordercircle").removeClass("colorselected");
             $(this).closest(".bordercircle").addClass("colorselected");
             var matches = class_name.match(/^(pastel-[a-zA-Z-0-9]*)\s/);
-
             $('#UpdateNoteVisibility [name="ColorClass"]').val(matches[0]);
         });
             
@@ -157,7 +153,7 @@
             var categories = $("#UpdateNoteVisibility #Categories").val();
 
             $.ajax({
-                url: "/api/UpdateNote/"+noteId,
+                url: "/api/Note/"+noteId,
                 type: "PUT",
                 data:  JSON.stringify({ Id: noteId, Title: noteTitle, Content: editorValue, Categories: categories, ColorClass: colorClass }),
                 dataType: "json",
